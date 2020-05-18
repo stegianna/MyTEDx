@@ -1,2 +1,2 @@
 # Mobile and Cloud Technologies
-Repository containing the laboratory project of the Mobile & Cloud Techologies course
+Repository containing myTEDx project developed during the Mobile & Cloud Techologies course
