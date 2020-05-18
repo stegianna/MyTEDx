@@ -4,7 +4,7 @@ import pyspark
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, collect_list, array_join
 
-tedx_dataset_path = "C:/Users/ste_g/Dropbox/Tecnologie Cloud e Mobile/Laboratorio virtuale/tedx_dataset-master/tedx_dataset.csv"
+tedx_dataset_path = "tedx_dataset.csv"
 
 spark = SparkSession.builder.master("local").getOrCreate()
 #### READ INPUT FILES TO CREATE AN INPUT DATASET
@@ -25,7 +25,7 @@ print(f"Number of items from RAW DATA with NOT NULL KEY {count_items_null}")
 
 
 ## READ TAGS DATASET
-tags_dataset_path = "C:/Users/ste_g/Dropbox/Tecnologie Cloud e Mobile/Laboratorio virtuale/tedx_dataset-master/tags_dataset.csv"
+tags_dataset_path = "tags_dataset.csv"
 tags_dataset = spark.read.option("header","true").csv(tags_dataset_path)
 
 
