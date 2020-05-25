@@ -1,0 +1,7 @@
+#vscode
+.vscode/
+aws_cloud/.vscode/
+local/.vscode/
+
+#python
+aws_cloud/__pycache__/
