@@ -1,0 +1,39 @@
+{
+  "permissionsBoundary": {},
+  "roleName": "mytedx_signi_in",
+  "policies": [
+    {
+      "document": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Action": [
+              "logs:CreateLogGroup",
+              "logs:CreateLogStream",
+              "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:*:*:*"
+          },
+          {
+            "Effect": "Allow",
+            "Action": [
+              "cognito-identity:*",
+              "cognito-idp:*",
+              "cognito-sync:*",
+              "iam:ListRoles",
+              "iam:ListOpenIdConnectProviders",
+              "sns:ListPlatformApplications"
+            ],
+            "Resource": "*"
+          }
+        ]
+      },
+      "name": "MytedxSign",
+      "type": "inline"
+    }
+  ],
+  "trustedEntities": [
+    "lambda.amazonaws.com"
+  ]
+}
